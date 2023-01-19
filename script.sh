@@ -1,5 +1,13 @@
 #!/bin/bash
 
+
+
+##########################################################################
+# Name: Mark Tharwat Samir
+# REG : 19200164
+##########################################################################
+
+
 #Creating the courses folder
 mkdir courseList
 
@@ -83,14 +91,14 @@ echo "ProfTrain III" >> ./courseList/Term8
 
 
 read -p "Enter Student Name: " outputFolder
-mkdir /home/ironhide/Desktop/$outputFolder
-touch /home/ironhide/Desktop/$outputFolder/transcript.txt
+mkdir ~/Desktop/$outputFolder
+touch ~/Desktop/$outputFolder/transcript.txt
 
 read -n 1 -p "Enter Current Term: " currentTerm
 
 for((i=1;i<=currentTerm;i++))
 do
-    mkdir /home/ironhide/Desktop/$outputFolder/Term$i
+    mkdir ~/Desktop/$outputFolder/Term$i
     file="./courseList/Term$i"
     while read -r -u 7 course
     do
@@ -127,5 +135,4 @@ do
         echo -e "$course = $grade" >> ~/Desktop/$outputFolder/transcript.txt
     done 7<"$file"
 done
-
 
